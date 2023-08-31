@@ -16,12 +16,30 @@ public  class Conexion {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
+            
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/"+bd, "root", "");
         } catch (ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
         return null;
     }
+    public static int comprobar_acceso(String usuario){
+        try {
+            Connection conn=Conexion.conectar("login");
+            
+            String sql="SELECT acceso FROM usuarios";
+            PreparedStatement ps=conn.prepareStatement(sql);
+            ResultSet resultado=ps.executeQuery();
+            
+            while(resultado.next()){
+                return resultado.getInt("acceso");
+            }
+            } catch (SQLException ex) {
+            ex.fillInStackTrace();
+            return -1;
+        }
+    return -1;
+}
     public static boolean comprobar_datos(String usuario,String pw){
         try {
             Connection conn=Conexion.conectar("login");
@@ -40,16 +58,13 @@ public  class Conexion {
                         return false;
                     }
                 }
-                else{
-                    JOptionPane.showMessageDialog(null, "El usuario no se encuentra Registrdo");
-                    return false;
-                }
             }
             
         } catch (SQLException ex) {
             ex.fillInStackTrace();
             return false;
         }
+        JOptionPane.showMessageDialog(null, "El usuario no se encuentra Registrdo");
         return false;
     }
 }

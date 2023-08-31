@@ -8,12 +8,12 @@ package com.rastas.login.gui;
  *
  * @author Sebastian
  */
-public class Ventana extends javax.swing.JFrame {
+public class Ventana2 extends javax.swing.JFrame {
 
     /**
      * Creates new form ventana
      */
-    public Ventana() {
+    public Ventana2() {
         initComponents();
     }
 
@@ -32,7 +32,7 @@ public class Ventana extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setText("ADMIN");
+        jLabel1.setText("USER");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -40,7 +40,7 @@ public class Ventana extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addGap(0, 321, Short.MAX_VALUE))
+                .addGap(0, 334, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
