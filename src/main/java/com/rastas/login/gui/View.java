@@ -48,7 +48,7 @@ public class View extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Sebastian\\Downloads\\hacker.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/hacker.png"))); // NOI18N
 
         btnMostrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mostrar.png"))); // NOI18N
         btnMostrar.addActionListener(new java.awt.event.ActionListener() {
